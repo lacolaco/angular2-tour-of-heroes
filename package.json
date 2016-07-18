@@ -11,7 +11,8 @@
     "_dynamic": "ngc -p tsconfig.dynamic.json",
     "_static": "ngc -p tsconfig.static.json",
     "_webpack": "webpack",
-    "build": "npm run _clean && npm run _tsconfig && npm run _tsc && npm run _dynamic && npm run _static && npm run _webpack"
+    "build": "npm run _clean && npm run _tsconfig && npm run _tsc && npm run _dynamic && npm run _static && npm run _webpack",
+    "deploy": "npm run build && firebase deploy"
   },
   "author": "",
   "license": "MIT",
