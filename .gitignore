@@ -1,5 +1,7 @@
 /node_modules/
 /tmp_*/
+*.ngfactory.ts
+*.css.shim.ts
 /typings/
 /dist/
 /.vscode/
