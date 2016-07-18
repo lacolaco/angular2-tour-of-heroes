@@ -1,0 +1,39 @@
+{
+  "name": "ng2-compiler-test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "static .",
+    "_clean": "rm -rf dist && rm -rf tmp_{tsc,static,dynamic} && rm -rf src/*.ngfactory.ts && rm -rf src/*.shim.ts",
+    "_tsconfig": "tsconfig -u tsconfig.json && tsconfig -u tsconfig.static.json && tsconfig -u tsconfig.dynamic.json",
+    "_tsc": "tsc -p tsconfig.json",
+    "_dynamic": "ngc -p tsconfig.dynamic.json",
+    "_static": "ngc -p tsconfig.static.json",
+    "_webpack": "webpack",
+    "build": "npm run _clean && npm run _tsconfig && npm run _tsc && npm run _dynamic && npm run _static && npm run _webpack"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "angular/common-builds",
+    "@angular/compiler": "angular/compiler-builds",
+    "@angular/compiler-cli": "angular/compiler-cli-builds",
+    "@angular/core": "angular/core-builds",
+    "@angular/forms": "angular/forms-builds",
+    "@angular/platform-browser": "angular/platform-browser-builds",
+    "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds",
+    "@angular/platform-server": "angular/platform-server-builds",
+    "@angular/router": "angular/router-builds",
+    "core-js": "^2.4.0",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^4.0.29",
+    "node-static": "^0.7.7",
+    "tsconfig-cli": "^2.0.0",
+    "typescript": "^1.9.0-dev",
+    "webpack": "^1.13.1"
+  }
+}

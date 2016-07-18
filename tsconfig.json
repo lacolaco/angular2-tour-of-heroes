@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "outDir": "tmp_tsc",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noImplicitAny": false
+    },
+    "filesGlob": [
+        "src/**/*.ts",
+        "!src/bootstrap-static.ts",
+        "node_modules/typescript/lib/lib.es6.d.ts"
+    ],
+    "files": [
+        "src/app.component.ts",
+        "src/bootstrap-dynamic.ts",
+        "src/hero-detail.component.ts",
+        "src/hero.service.ts",
+        "src/hero.ts",
+        "src/heroes.component.ts",
+        "src/main.module.ts",
+        "src/mock-heroes.ts",
+        "node_modules/typescript/lib/lib.es6.d.ts"
+    ]
+}
