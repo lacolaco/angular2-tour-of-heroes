@@ -1,11 +1,12 @@
 {
-  "firebase": "laco-ng2-tutorial",
-  "public": ".",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**",
-    "**/tmp_*/**",
-    "**/.vscode/**"
-  ]
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/tmp_*/**",
+      "**/.vscode/**"
+    ]
+  }
 }
