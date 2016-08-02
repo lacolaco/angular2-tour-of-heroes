@@ -7,6 +7,16 @@
       "**/node_modules/**",
       "**/tmp_*/**",
       "**/.vscode/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/static/**",
+        "destination": "/static/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }

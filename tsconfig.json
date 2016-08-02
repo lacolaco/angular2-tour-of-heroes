@@ -15,6 +15,7 @@
     ],
     "files": [
         "src/app.component.ts",
+        "src/app.routes.ts",
         "src/bootstrap-dynamic.ts",
         "src/hero-detail.component.ts",
         "src/hero.service.ts",

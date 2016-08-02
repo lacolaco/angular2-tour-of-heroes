@@ -1,20 +1,36 @@
-import {AppModule, ApplicationRef} from '@angular/core';
+import {NgModule, ApplicationRef, ANALYZE_FOR_ENTRY_COMPONENTS} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {COMMON_DIRECTIVES} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
+import {appRoutes} from './app.routes';
+import {HeroService} from './hero.service';
 
-@AppModule({
-    modules: [BrowserModule, FormsModule],
+@NgModule({
+    imports: [
+        BrowserModule,
+        CommonModule,
+        FormsModule,
+        RouterModule.forRoot(appRoutes, {
+            useHash: false
+        })
+    ],
     providers: [
+        HeroService
     ],
-    directives: [
-        ...COMMON_DIRECTIVES,
+    declarations: [
+        AppComponent,
+        HeroesComponent,
+        HeroDetailComponent,
+        // ...COMMON_DIRECTIVES,
     ],
-    precompile: [AppComponent, HeroesComponent, HeroDetailComponent]
+    entryComponents: [
+        AppComponent
+    ]
 })
 export class MainModule {
     constructor(public appRef: ApplicationRef) {

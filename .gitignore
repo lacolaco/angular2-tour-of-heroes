@@ -6,3 +6,5 @@
 /dist/
 /.vscode/
 /.idea/
+npm-debug.log
+firebase-debug.log
