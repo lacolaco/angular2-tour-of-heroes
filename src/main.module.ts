@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
+import {DashboardComponent} from './dashboard.component';
 import {appRoutes} from './app.routes';
 import {HeroService} from './hero.service';
 
@@ -26,14 +27,15 @@ import {HeroService} from './hero.service';
         AppComponent,
         HeroesComponent,
         HeroDetailComponent,
+        DashboardComponent,
         // ...COMMON_DIRECTIVES,
     ],
     entryComponents: [
         AppComponent
+    ],
+    bootstrap: [
+        AppComponent
     ]
 })
 export class MainModule {
-    constructor(public appRef: ApplicationRef) {
-        appRef.bootstrap(AppComponent)
-    }
 }

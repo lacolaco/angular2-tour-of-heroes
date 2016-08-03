@@ -10,17 +10,17 @@ module.exports = {
         filename: '[name].bundle.js'
     },
     plugins: [
-        // new webpack.optimize.DedupePlugin(),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     beautify: false,
-        //     mangle: {
-        //         screw_ie8: true
-        //     },
-        //     compress: {
-        //         warnings: false,
-        //         screw_ie8: true
-        //     },
-        //     comments: false
-        // })
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            beautify: false,
+            mangle: {
+                screw_ie8: true
+            },
+            compress: {
+                warnings: false,
+                screw_ie8: true
+            },
+            comments: false
+        })
     ]
 };
